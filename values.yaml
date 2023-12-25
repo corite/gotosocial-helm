@@ -15,10 +15,6 @@ tls:
   enabled: false
   email: ""
 
-
-
-
-
 image:
   repository: superseriousbusiness/gotosocial
   pullPolicy: IfNotPresent
@@ -53,7 +49,6 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
 
 ingress:
   enabled: false
