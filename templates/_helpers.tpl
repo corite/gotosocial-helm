@@ -60,3 +60,11 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{- define "gotosocial.datapvc" -}}
+{{- default (printf "%s-data-pvc" (include "gotosocial.fullname" .) ) .Values.persistence.claimName }}
+{{- end }}
+
+{{- define "gotosocial.port" -}}
+{{- 8080 }}
+{{- end }}
