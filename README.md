@@ -35,4 +35,3 @@ ingress:
 ## TODO
 
 - publish the chart
-- add integration tests?
