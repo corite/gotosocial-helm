@@ -1,0 +1,5 @@
+host: host.local
+
+storage:
+  local:
+    enabled: false

@@ -1,0 +1,13 @@
+host: host.local
+
+ingress:
+  enabled: true
+  hosts:
+  - host: host.local
+    paths:
+    - path: /
+      pathType: Prefix
+  tls: 
+  - secretName: gotosocial-cert
+    hosts:
+    - host.local
