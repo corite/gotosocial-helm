@@ -13,8 +13,7 @@ After installing GoToSocial for the first time, you must create a user by attach
 ### Example Configuration
 
 ```yaml
-host: 
-  name: your-domain.com
+host: your-domain.com
 timezone: "Europe/Berlin"
 
 
