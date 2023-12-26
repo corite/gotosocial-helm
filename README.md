@@ -36,5 +36,4 @@ ingress:
 ## TODO
 
 - publish the chart
-- add more options such as log-level
 - add integration tests?

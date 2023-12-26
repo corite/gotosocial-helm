@@ -62,7 +62,7 @@ Create the name of the service account to use
 {{- end }}
 
 {{- define "gotosocial.datapvc" -}}
-{{- default (printf "%s-data-pvc" (include "gotosocial.fullname" .) ) .Values.persistence.claimName }}
+{{- default (printf "%s-data-pvc" (include "gotosocial.fullname" .) ) .Values.storage.local.claimName }}
 {{- end }}
 
 {{- define "gotosocial.port" -}}

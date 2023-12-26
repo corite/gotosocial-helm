@@ -2,10 +2,19 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-host: 
-  name: null # chart-example.local
-  address: "0.0.0.0"
+host: null # chart-example.local
+applicationName: gotosocial
+landingPageUser: ""
+acountDomain: ""
 timezone: "UTC"
+
+
+log:
+  level: info
+  dbQueries: false
+  clientIP: true
+  timestampFormat: 02/01/2006 15:04:05.000
+
 db:
   type: "sqlite"
   address: /gotosocial/storage/sqlite.db
@@ -16,20 +25,23 @@ tls:
 image:
   repository: superseriousbusiness/gotosocial
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: latest
   pullSecrets: []
 
-persistence:
-  enabled: true
-  claimName: null
-  size: 10Gi
-  accessModes:
-  - ReadWriteOnce
-  labels: {}
-  storageClass:
-  annotations:
-    helm.sh/resource-policy: keep
+storage:
+  local:
+    enabled: true
+    claimName: null
+    accessModes:
+    - ReadWriteOnce
+    labels: {}
+    class:
+    annotations:
+      helm.sh/resource-policy: keep
+    size: 10Gi
+  s3: #todo no implemented yet
+    enabled: false
+
 
 
 nameOverride: ""
