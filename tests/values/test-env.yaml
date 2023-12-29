@@ -1,0 +1,8 @@
+host: chart-example.local
+
+
+env:
+  FOO_STR: bar
+  FOO_QUOT: "bar"
+  FOO_NUM: 42
+  FOO_BOOL: true

@@ -44,4 +44,8 @@ env:
 - name: GTS_LETSENCRYPT_EMAIL_ADDRESS
   value: {{ .Values.tls.email | quote }}
 {{- end }}
+{{- range $key, $value := .Values.env }}
+- name: {{ $key | quote }}
+  value: {{ $value | quote }}
+{{- end -}}
 {{- end -}}

@@ -31,7 +31,3 @@ ingress:
     hosts:
     - your-domain.com
 ```
-
-## TODO
-
-- publish the chart

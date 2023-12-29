@@ -1,0 +1,30 @@
+suite: test correctness of environment
+templates:
+  - templates/deployment.yaml
+tests:
+  - it: default values
+    release:
+      name: gts
+    values:
+      - test-env.yaml
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: FOO
+            value: "bar"
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: FOO_QUOT
+            value: "bar"
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: FOO_NUM
+            value: "appserver"
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: FOO_BOOL
+            value: "true"

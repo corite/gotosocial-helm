@@ -1,5 +1,10 @@
 name: Build & Test Chart
-on: [push, workflow_dispatch, pull_request]
+
+on:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -7,15 +12,20 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: azure/setup-helm@v3
+    - name: install unittest plugin
+      run: helm plugin install https://github.com/helm-unittest/helm-unittest.git
     - uses: helm/kind-action@v1.8.0
-    - name: template
+    - name: unit tests
+      run: |
+        helm unittest .
+    - name: template tests
       run: |
         for file in test-values/*; do
           echo "############## template $file ###############"
           helm template --debug --validate gts-test . -f $file
           echo "#############################################"
         done
-    - name: install
+    - name: integration tests
       run: |
         for file in test-values/*; do
           echo "############## install $file ################"
