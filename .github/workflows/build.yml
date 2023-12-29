@@ -12,6 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: azure/setup-helm@v3
+    - name: install unittest plugin
+      run: helm plugin install https://github.com/helm-unittest/helm-unittest.git
     - uses: helm/kind-action@v1.8.0
     - name: unit tests
       run: |
