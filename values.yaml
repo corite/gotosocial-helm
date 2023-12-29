@@ -22,6 +22,12 @@ tls:
   enabled: false
   email: ""
 
+# define arbitrary environment variables for the GoToSocial application
+# this is especially useful if you want to leverage GoToSocial functionality
+# that is not yet supported by "normal" chart values (please open an issue/PR if you'd like "real" support) 
+env:
+#  FOO: bar
+
 image:
   repository: superseriousbusiness/gotosocial
   pullPolicy: IfNotPresent
