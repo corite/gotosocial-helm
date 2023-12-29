@@ -11,8 +11,6 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-    - name: check if on main branch
-      run: exit ${{ github.ref_name }} == "main"
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0

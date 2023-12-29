@@ -1,4 +1,4 @@
-# Helm-Charts for GoToSocial
+# Helm-Charts for GoToSocial [![Build & Test Chart](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml/badge.svg)](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml) [![Build & Test Chart](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml/badge.svg)](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml)
 
 This repo contains (unofficial) helm charts for the official GoToSocial docker images.
 
