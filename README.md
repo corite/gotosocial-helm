@@ -1,8 +1,19 @@
-# Helm-Charts for GoToSocial [![Build & Test Chart](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml/badge.svg)](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml) [![Build & Test Chart](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml/badge.svg)](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml)
+# Helm-Charts for GoToSocial [![Build & Test Chart](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml/badge.svg)](https://github.com/corite/gotosocial-helm/actions/workflows/build.yml) [![Release Chart](https://github.com/corite/gotosocial-helm/actions/workflows/release.yml/badge.svg)](https://github.com/corite/gotosocial-helm/actions/workflows/release.yml)
 
 This repo contains (unofficial) helm charts for the official GoToSocial docker images.
 
 ## Installation
+
+Add the repo by running 
+
+```bash
+helm repo add gotosocial-helm https://corite.dev/gotosocial-helm
+```
+and then install you values with
+
+```bash
+helm install gotosocial gotosocial-helm/gotosocial -f your-values.yaml
+```
 
 For all currently available options have a look at the `values.yaml`. If you are missing an option, please feel free to open an issue/PR.
 
