@@ -2,8 +2,9 @@ name: Release Chart
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+    - main
+  workflow_dispatch:
 
 jobs:
   release:
