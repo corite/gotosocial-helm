@@ -3,6 +3,16 @@ entries:
   gotosocial:
   - apiVersion: v2
     appVersion: latest
+    created: "2024-01-14T20:52:07.20544789Z"
+    description: A Helm chart for GoToSocial
+    digest: 09d81bfd9ada424d0abb862b70b7ea86f92abe61402c36d2d6e3427094c683cc
+    name: gotosocial
+    type: application
+    urls:
+    - https://github.com/corite/gotosocial-helm/releases/download/gotosocial-0.2.0/gotosocial-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: latest
     created: "2024-01-01T16:58:33.569865656Z"
     description: A Helm chart for GoToSocial
     digest: ac260f1e201b329d6c50afc1e2b8bf8b63e521b05969dcbdf8a1f10e6090569c
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/corite/gotosocial-helm/releases/download/gotosocial-0.1.0/gotosocial-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-01T16:58:33.5698785Z"
+generated: "2024-01-14T20:52:07.205460183Z"
